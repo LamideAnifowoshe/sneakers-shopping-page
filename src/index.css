@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.container {
+  width: 90%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+Nav {
+  width: 90%;
+  margin: auto;
+  padding: 0 30px;
+  border-bottom: 1px solid hsl(220, 14%, 75%);
+}
+
+Nav.Link {
+  color: hsl(220, 14%, 75%);
+  textdecoration: none;
+  padding: 0 30px;
+}
+
+.img {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 15px;
+}
+
+.img:hover {
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 30px;
+}
+
+.product {
+  border-radius: 15px;
+}
+
+.card {
+  border: none !important;
+}
+
+.thumbnail {
+  border-radius: 8px;
+}
+
+h6 {
+  color: hsl(26, 100%, 55%);
+  font-size: 0.8rem;
+}
+
+p {
+  color: hsl(220, 14%, 75%);
+}
+
+.carousel {
+  width: 400px;
+}
+
+.fa-shopping-cart {
+  background-color: orange !important;
+  border-color: white;
+}
+
+/*Footer*/
+.footer {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 500px;
+}
+.footer a {
+  color: hsl(228, 45%, 44%);
 }
