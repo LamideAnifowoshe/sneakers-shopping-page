@@ -1,5 +1,8 @@
 import React from "react";
 import Badge from "react-bootstrap/Badge";
+import Button from "react-bootstrap/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Sneakers = () => {
   return (
@@ -26,6 +29,25 @@ const Sneakers = () => {
         >
           $250.00
         </del>
+      </div>
+      <div>
+        <Button variant="light" style={{ fontWeight: "bolder" }}>
+          <Badge bg="light" style={{ color: "orange", padding: "0 30px 0 0" }}>
+            -
+          </Badge>{" "}
+          3{" "}
+          <Badge bg="light" style={{ color: "orange", padding: "0 30px" }}>
+            +
+          </Badge>
+          <span className="visually-hidden">unread messages</span>
+        </Button>
+        <Button
+          variant="light"
+          size="lg"
+          style={{ backgroundColor: "orange", color: "white", width: "220px" }}
+        >
+        <FontAwesomeIcon icon={faCartShopping} /> Add to Cart
+        </Button>
       </div>
     </div>
   );
