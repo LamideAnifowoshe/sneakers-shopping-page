@@ -18,7 +18,7 @@ const NavBar = () => {
         variant="light"
         className="pt-4 pb-4"
         style={{
-          width: "90%",
+          width: "80%",
           margin: "auto",
           padding: "0 30px",
           borderBottom: "1px solid hsl(220, 14%, 75%)",

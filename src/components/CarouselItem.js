@@ -14,7 +14,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 const CarouselItem = () => {
   return (
     <div>
-      <Carousel className="pt-5 mt-5 ps-5 ms-5">
+      <Carousel className="pt-5 mt-5 ms-5">
         <Carousel.Item>
           <img
             className="d-block"
@@ -22,7 +22,6 @@ const CarouselItem = () => {
             alt=""
             style={{
               borderRadius: "15px",
-              boxSizing: "border-box",
               width: "400px",
             }}
           />
@@ -53,7 +52,7 @@ const CarouselItem = () => {
         </Carousel.Item>
       </Carousel>
 
-      <CardGroup className="ps-5 ms-5 mt-3" style={{ width: "468px" }}>
+      <CardGroup className="ms-5 mt-3" style={{ width: "440px" }}>
         <Card>
           <Card.Img
             variant="top"
