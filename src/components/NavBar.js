@@ -11,7 +11,19 @@ import Image1 from "./images/image1.png";
 const NavBar = () => {
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="light"
+        variant="light"
+        className="pt-4 pb-4"
+        style={{
+          width: "90%",
+          margin: "auto",
+          padding: "0 30px",
+          borderBottom: "1px solid hsl(220, 14%, 75%)",
+        }}
+      >
         <Container>
           <Navbar.Brand href="#home">
             <img src={Logo} />
@@ -26,20 +38,17 @@ const NavBar = () => {
               <Nav.Link href="#pricing">Contact</Nav.Link>
             </Nav>
             <Nav>
-              <NavDropdown
-                title=<FontAwesomeIcon icon={faCartShopping} />
-                id="collasible-nav-dropdown"
-              >
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link href="#pricing">
+                <FontAwesomeIcon icon={faCartShopping} />
+              </Nav.Link>
 
               <Nav.Link eventKey={2} href="#memes">
                 <img
                   src={Image1}
+                  alt=""
                   style={{
+                    position: "absolute",
+                    bottom: "15px",
                     height: "50px",
                     width: "50px",
                   }}
