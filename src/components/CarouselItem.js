@@ -52,7 +52,7 @@ const CarouselItem = () => {
         </Carousel.Item>
       </Carousel>
 
-      <CardGroup className="ms-5 mt-3" style={{ width: "440px" }}>
+      <CardGroup className="ms-5 mt-3" style={{ width: "430px" }}>
         <Card>
           <Card.Img
             variant="top"
