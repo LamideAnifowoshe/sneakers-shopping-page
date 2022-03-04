@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar items={items} />
       <Container style={{ width: "80%" }}>
         <Row>
           <Col sm={7}>
