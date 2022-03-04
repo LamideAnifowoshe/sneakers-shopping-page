@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-const Sneakers = ({ onIncrement, onChange, onDecrement, items }) => {
+const Sneakers = ({ onIncrement, onChange, onDecrement, items, onAdd }) => {
   return (
     <div>
       <div className="pt-5 mt-5">
@@ -63,7 +63,12 @@ const Sneakers = ({ onIncrement, onChange, onDecrement, items }) => {
         <Button
           variant="light"
           size="lg"
-          style={{ backgroundColor: "orange", color: "white", width: "220px" }}
+          onClick={onAdd}
+          style={{
+            backgroundColor: "darkorange",
+            color: "white",
+            width: "220px",
+          }}
         >
           <FontAwesomeIcon icon={faCartShopping} /> Add to Cart
         </Button>

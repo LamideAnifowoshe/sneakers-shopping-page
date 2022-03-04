@@ -26,6 +26,10 @@ function App() {
     setItems(e.target.value);
   };
 
+  const onAdd = () => {
+    setItems(0);
+  };
+
   return (
     <div className="App">
       <NavBar items={items} />
@@ -38,6 +42,7 @@ function App() {
             <Sneakers
               onIncrement={handleIncrement}
               onChange={handleChange}
+              onAdd={onAdd}
               onDecrement={handleDecrement}
               items={items}
             />
