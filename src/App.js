@@ -16,6 +16,12 @@ function App() {
     }
   };
 
+  const handleDecrement = () => {
+    if (items > 0) {
+      setItems(items - 1);
+    }
+  };
+
   const handleChange = (e) => {
     setItems(e.target.value);
   };
@@ -32,6 +38,7 @@ function App() {
             <Sneakers
               onIncrement={handleIncrement}
               onChange={handleChange}
+              onDecrement={handleDecrement}
               items={items}
             />
           </Col>
