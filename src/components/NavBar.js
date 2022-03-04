@@ -12,6 +12,8 @@ import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import Logo from "./images/logo.svg";
 import Image1 from "./images/image1.png";
 
+const price = 125.0;
+
 const NavBar = ({ items }) => {
   return (
     <div>
@@ -65,8 +67,7 @@ const NavBar = ({ items }) => {
                       <Card.Text style={{ color: "grey" }}>
                         Fall Limited Edition Sneakers {""}{" "}
                         <FontAwesomeIcon icon={faTrashCan} />
-                        <br />
-                        $125.00 x 3 $375.00
+                        <br />$ {price}.00 x {items} $ {`${price * items}`}.00
                       </Card.Text>
                       <Button
                         variant="light"
