@@ -30,9 +30,13 @@ function App() {
     setItems(0);
   };
 
+  const deleteItem = (id) => {
+    setItems(0);
+  };
+
   return (
     <div className="App">
-      <NavBar items={items} />
+      <NavBar items={items} onDelete={deleteItem} />
       <Container style={{ width: "80%" }}>
         <Row>
           <Col sm={7}>
