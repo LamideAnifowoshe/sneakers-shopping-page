@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import Badge from "react-bootstrap/Badge";
 import Container from "react-bootstrap/Container";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import ImageProduct1 from "./images/imageproduct1.jpg";
@@ -14,7 +15,7 @@ import Image1 from "./images/image1.png";
 
 const price = 125.0;
 
-const NavBar = ({ items }) => {
+const NavBar = ({ items, onDelete }) => {
   return (
     <div>
       <Navbar
@@ -66,8 +67,22 @@ const NavBar = ({ items }) => {
                       />
                       <Card.Text style={{ color: "grey" }}>
                         Fall Limited Edition Sneakers {""}{" "}
-                        <FontAwesomeIcon icon={faTrashCan} />
-                        <br />$ {price}.00 x {items} $ {`${price * items}`}.00
+                        <FontAwesomeIcon
+                          icon={faTrashCan}
+                          onClick={onDelete}
+                          style={{ padding: "0 0 0 50px" }}
+                        />
+                        <br />$ {price}.00 x {items}
+                        <span
+                          style={{
+                            fontWeight: "bolder",
+                            padding: "0 0 0 20px",
+                            color: "black",
+                          }}
+                        >
+                          {" "}
+                          $ {`${price * items}`}.00
+                        </span>
                       </Card.Text>
                       <Button
                         variant="light"
@@ -84,6 +99,13 @@ const NavBar = ({ items }) => {
                   </Card>
                 )}
               </NavDropdown>
+              <Badge
+                pill
+                bg="light"
+                style={{ color: "black", position: "absolute", left: "945px" }}
+              >
+                {items}
+              </Badge>
 
               <Nav.Link eventKey={2} href="#memes">
                 <img
