@@ -1,14 +1,18 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import ImageProduct1 from "./images/imageproduct1.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import Logo from "./images/logo.svg";
 import Image1 from "./images/image1.png";
 
-const NavBar = () => {
+const NavBar = ({ items }) => {
   return (
     <div>
       <Navbar
@@ -26,7 +30,7 @@ const NavBar = () => {
       >
         <Container>
           <Navbar.Brand href="#home">
-            <img src={Logo} />
+            <img src={Logo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -38,9 +42,47 @@ const NavBar = () => {
               <Nav.Link href="#pricing">Contact</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#pricing">
-                <FontAwesomeIcon icon={faCartShopping} />
-              </Nav.Link>
+              <NavDropdown
+                title=<FontAwesomeIcon icon={faCartShopping} />
+                id="navbarScrollingDropdown"
+              >
+                {items === 0 ? (
+                  <Card style={{ width: "20rem" }}>
+                    <Card.Title>Cart</Card.Title>
+                    <Card.Text style={{ color: "grey" }}>
+                      Cart is empty.
+                    </Card.Text>
+                  </Card>
+                ) : (
+                  <Card style={{ width: "20rem" }}>
+                    <Card.Title>Cart</Card.Title>
+                    <Card.Body>
+                      <Card.Img
+                        variant="left"
+                        src={ImageProduct1}
+                        style={{ width: "50px" }}
+                      />
+                      <Card.Text style={{ color: "grey" }}>
+                        Fall Limited Edition Sneakers {""}{" "}
+                        <FontAwesomeIcon icon={faTrashCan} />
+                        <br />
+                        $125.00 x 3 $375.00
+                      </Card.Text>
+                      <Button
+                        variant="light"
+                        size="lg"
+                        style={{
+                          backgroundColor: "darkorange",
+                          color: "white",
+                          width: "90%",
+                        }}
+                      >
+                        Checkout
+                      </Button>
+                    </Card.Body>
+                  </Card>
+                )}
+              </NavDropdown>
 
               <Nav.Link eventKey={2} href="#memes">
                 <img
