@@ -43,6 +43,7 @@ const Sneakers = ({ onIncrement, onChange, onDecrement, items }) => {
           <input
             type="text"
             value={items}
+            onChange={onChange}
             style={{
               fontWeight: "bolder",
               border: "none",
