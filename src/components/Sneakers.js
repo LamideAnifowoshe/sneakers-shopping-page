@@ -31,29 +31,34 @@ const Sneakers = ({ onIncrement, onChange, onDecrement, items }) => {
         </del>
       </div>
       <div>
-        <Button
-          variant="light"
-          style={{ color: "orange" }}
-          onClick={onDecrement}
-        >
-          -
-        </Button>
+        <span style={{ display: "inline-block !important" }}>
+          <Button
+            variant="light"
+            style={{ color: "orange", fontWeight: "bolder" }}
+            onClick={onDecrement}
+          >
+            -
+          </Button>
 
-        <input
-          type="text"
-          class="form-control"
-          value={items}
-          style={{ fontWeight: "bolder" }}
-        />
+          <input
+            type="text"
+            value={items}
+            style={{
+              fontWeight: "bolder",
+              border: "none",
+              width: "70px",
+              textAlign: "center",
+            }}
+          />
 
-        <Button
-          variant="light"
-          style={{ color: "orange" }}
-          onClick={onIncrement}
-        >
-          +
-        </Button>
-
+          <Button
+            variant="light"
+            style={{ color: "orange", fontWeight: "bolder" }}
+            onClick={onIncrement}
+          >
+            +
+          </Button>
+        </span>
         <Button
           variant="light"
           size="lg"
